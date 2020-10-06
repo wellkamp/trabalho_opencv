@@ -32,12 +32,6 @@ class Histograma(Imagem):
         hist_eq = cv2.equalizeHist(self.nivel_cinza())  # Colocando em uma variavel a imagem equalizada
         return hist_eq
 
-    def demonstra_imagens(self):
-        cv2.imshow('Original nivel cinza', self.nivel_cinza())
-        cv2.imshow('Equalizada', self.hist_equalizado())
-        cv2.imshow('Otsu', self.otsu())
-        cv2.waitKey(0)
-
     def otsu(self):
         temp = self.hist_equalizado()
         T = mahotas.thresholding.otsu(temp)
@@ -46,4 +40,12 @@ class Histograma(Imagem):
         temp[temp < 255] = 0
         temp = cv2.bitwise_not(temp)
         return temp
+
+    def demonstra_imagens(self):
+        cv2.imshow('Original nivel cinza', self.nivel_cinza())
+        cv2.imshow('Equalizada', self.hist_equalizado())
+        cv2.imshow('Otsu', self.otsu())
+        cv2.waitKey(0)
+
+
 

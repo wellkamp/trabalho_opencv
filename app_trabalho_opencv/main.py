@@ -17,6 +17,7 @@ def main():
     histograma.plt_normal()
     histograma.plt_equalizado()
     histograma.salvar_imagem('assets/imagens_salvas/casal_equalizado.tiff', histograma.hist_equalizado())
+    histograma.salvar_imagem('assets/imagens_salvas/casal_otsu.tiff', histograma.otsu())
     histograma.demonstra_imagens()
 
     # Filtro Suavização 1
