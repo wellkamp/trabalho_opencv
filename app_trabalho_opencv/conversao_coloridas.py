@@ -6,6 +6,7 @@ from .imagem import Imagem
 class Conversao_coloridas(Imagem):
     def __init__(self, img):
         super(Conversao_coloridas, self).__init__(img)
+
     # Faz a conversão para hsi
     def converte_hsi(self):
         img = cv2.cvtColor(self.img, cv2.COLOR_RGB2HSV)
@@ -17,6 +18,7 @@ class Conversao_coloridas(Imagem):
         voltar_para_RGB = cv2.cvtColor(hsi, cv2.COLOR_HSV2RGB)  # convertendo para RGB
         cv2.imshow('Transformada para RGB', voltar_para_RGB)  # Mostrando imagem convertida novamente
         cv2.imwrite('assets/imagens_salvas/colorida_hsi.tiff', voltar_para_RGB)
+
     # Faz a conversão para YCbCr
     def converte_YCbCr(self):
         img = cv2.cvtColor(self.img, cv2.COLOR_RGB2YCrCb)
@@ -28,6 +30,7 @@ class Conversao_coloridas(Imagem):
         voltar_para_RGB = cv2.cvtColor(ycrcb, cv2.COLOR_YCR_CB2RGB)  # convertendo para RGB
         cv2.imshow('Transformada para RGB', voltar_para_RGB)  # Mostrando imagem convertida novamente
         cv2.imwrite('assets/imagens_salvas/colorida_ycbcr.tiff', voltar_para_RGB)
+
     # Demonstra as imagens
     def demonstra_imagens(self):
         cv2.imshow('Original', self.img)
