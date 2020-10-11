@@ -3,9 +3,9 @@ from .imagem import Imagem
 
 
 # Classe filha de Imagem
-class Filtro_suavizacao(Imagem):
+class FiltroSuavizacao(Imagem):
     def __init__(self, img, valor1, valor2):
-        super(Filtro_suavizacao, self).__init__(img)
+        super(FiltroSuavizacao, self).__init__(img)
         self.valor1 = valor1
         self.valor2 = valor2
         self.valor_de_limiar = 0

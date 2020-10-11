@@ -3,9 +3,9 @@ from .imagem import Imagem
 
 
 # Classe filha de Imagem
-class Conversao_coloridas(Imagem):
+class ConversaoColoridas(Imagem):
     def __init__(self, img):
-        super(Conversao_coloridas, self).__init__(img)
+        super(ConversaoColoridas, self).__init__(img)
 
     # Faz a conversão para hsi
     def converte_hsi(self):

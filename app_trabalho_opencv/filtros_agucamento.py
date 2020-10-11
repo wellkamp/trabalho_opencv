@@ -4,9 +4,9 @@ from .imagem import Imagem
 
 
 # Classe filha de Imagem
-class Filtro_agucamento(Imagem):
+class FiltroAgucamento(Imagem):
     def __init__(self, img):
-        super(Filtro_agucamento, self).__init__(img)
+        super(FiltroAgucamento, self).__init__(img)
         self.lap = ''
 
     def laplaciano(self):
